@@ -14,6 +14,7 @@
 		5E533FEA23D98D1300B7078B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E533FE823D98D1300B7078B /* LaunchScreen.storyboard */; };
 		5E533FF523D98F4300B7078B /* VideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E533FF423D98F4300B7078B /* VideoListViewController.swift */; };
 		5E533FF723DEE5A700B7078B /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E533FF623DEE5A700B7078B /* UIView+Ext.swift */; };
+		5E533FF923DF5CBE00B7078B /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E533FF823DF5CBE00B7078B /* VideoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5E533FEB23D98D1300B7078B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E533FF423D98F4300B7078B /* VideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewController.swift; sourceTree = "<group>"; };
 		5E533FF623DEE5A700B7078B /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		5E533FF823DF5CBE00B7078B /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				5E533FE823D98D1300B7078B /* LaunchScreen.storyboard */,
 				5E533FEB23D98D1300B7078B /* Info.plist */,
 				5E533FF423D98F4300B7078B /* VideoListViewController.swift */,
+				5E533FF823DF5CBE00B7078B /* VideoCell.swift */,
 			);
 			path = "programmaticui-customCell";
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				5E533FF723DEE5A700B7078B /* UIView+Ext.swift in Sources */,
 				5E533FF523D98F4300B7078B /* VideoListViewController.swift in Sources */,
 				5E533FE023D98D1000B7078B /* SceneDelegate.swift in Sources */,
+				5E533FF923DF5CBE00B7078B /* VideoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
