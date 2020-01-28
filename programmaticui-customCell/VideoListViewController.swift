@@ -11,20 +11,27 @@ import UIKit
 class VideoListViewController: UIViewController {
 
     var tableView = UITableView()
+    var videos: [Video] = []
+    
+    struct Cells {
+        
+        static let videoCell = "VideoCell"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Amit's Videos"
+        videos = fetchData()
         configureTableView()
     }
+    
+   
     
     func configureTableView(){
         view.addSubview(tableView)
         setTableViewDelegates()
-        //set row height
         tableView.rowHeight = 100
-        
-        //resister cell
-        //set constraints
+        tableView.register(VideoCell.self, forCellReuseIdentifier: Cells.videoCell)
         tableView.pin(to: view)
     }
    
@@ -42,7 +49,21 @@ extension VideoListViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cells.videoCell) as! VideoCell
+        let video = videos[indexPath.row]
+        cell.set(video: video)
+        
+        return cell
     }
     
+}
+
+extension VideoListViewController {
+    
+    func fetchData() -> [Video] {
+        let video1 = Video(image: Images.one, title: "iOS Tutorial One")
+        let video2 = Video(image: Images.two, title: "iOS Tutorial Two")
+        
+        return [video1, video2]
+    }
 }
