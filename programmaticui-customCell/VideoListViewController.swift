@@ -23,6 +23,7 @@ class VideoListViewController: UIViewController {
         title = "Amit's Videos"
         videos = fetchData()
         configureTableView()
+        
     }
     
    
@@ -45,12 +46,14 @@ class VideoListViewController: UIViewController {
 extension VideoListViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return videos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cells.videoCell) as! VideoCell
         let video = videos[indexPath.row]
+//        print(indexPath.row)
+
         cell.set(video: video)
         
         return cell
@@ -63,6 +66,14 @@ extension VideoListViewController {
     func fetchData() -> [Video] {
         let video1 = Video(image: Images.one, title: "iOS Tutorial One")
         let video2 = Video(image: Images.two, title: "iOS Tutorial Two")
+//        let video3 = Video(image: Images.one, title: "iOS Tutorial One")
+//        let video9 = Video(image: Images.two, title: "iOS Tutorial Two")
+//        let video4 = Video(image: Images.one, title: "iOS Tutorial One")
+//        let video5 = Video(image: Images.two, title: "iOS Tutorial Two")
+//        let video6 = Video(image: Images.one, title: "iOS Tutorial One")
+//        let video7 = Video(image: Images.two, title: "iOS Tutorial Two")
+//        let video8 = Video(image: Images.two, title: "iOS Tutorial Two")
+        
         
         return [video1, video2]
     }

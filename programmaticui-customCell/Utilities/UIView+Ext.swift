@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIView{
+extension UIView {
     
     func pin(to superView: UIView){
         translatesAutoresizingMaskIntoConstraints                           = false
